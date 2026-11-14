@@ -3,12 +3,15 @@ import { carreras, resumenUsuario, sesiones, usuarios } from '../repos/datos.rep
 
 export function registrar(datos) {
     const { nombre, usuario, correo, contrasena, carreraId, aceptaTerminos } = datos;
+    if (typeof correo !== 'string' || !/^[^\s@]+@tecnologicoliceocristiano\.edu\.ec$/i.test(correo.trim())) {
+        return { estado: 400, cuerpo: { mensaje: 'Usa un correo que termine en @tecnologicoliceocristiano.edu.ec.' } };
+    }
+
     if (typeof nombre !== 'string' || !nombre.trim() ||
-        typeof usuario !== 'string' || !/^[a-z0-9._-]{3,30}$/i.test(usuario.trim()) ||
-        typeof correo !== 'string' || !/^[^\s@]+@itslc\.example$/i.test(correo.trim()) ||
+        typeof usuario !== 'string' || !/^[a-z0-9._-]{8,20}$/i.test(usuario.trim()) ||
         typeof contrasena !== 'string' || contrasena.length < 8 ||
         !carreras.some(carrera => carrera.id === carreraId) || aceptaTerminos !== true) {
-        return { estado: 400, cuerpo: { mensaje: 'Revisa el nombre, usuario, correo institucional de prueba, carrera, contraseña y términos' } };
+        return { estado: 400, cuerpo: { mensaje: 'Revisa el nombre, el usuario (de 8 a 20 caracteres), la carrera, la contraseña y los términos.' } };
     }
 
     const nombreUsuario = usuario.trim().toLowerCase();
@@ -23,7 +26,7 @@ export function registrar(datos) {
         usuario: nombreUsuario,
         correo: correoInstitucional,
         carreraId,
-        rol: 'estudiante',
+        rol: 'usuario',
         fotoUrl: null,
         contrasena
     };
@@ -41,7 +44,7 @@ export function iniciarSesion(datos) {
     const cuenta = identificador.trim().toLowerCase();
     const persona = usuarios.find(usuario => usuario.usuario === cuenta || usuario.correo === cuenta);
     if (!persona || persona.contrasena !== contrasena) {
-        return { estado: 401, cuerpo: { mensaje: 'Credenciales incorrectas' } };
+        return { estado: 401, cuerpo: { mensaje: 'Revisa tu usuario o correo y tu contraseña.' } };
     }
 
     const token = randomUUID();

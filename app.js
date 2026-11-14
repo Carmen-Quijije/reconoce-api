@@ -12,7 +12,7 @@ app.use('/api', comunidadRouter);
 app.use('/api/reconocimientos', reconocimientoRouter);
 
 app.use((req, res) => {
-    res.status(404).json({ mensaje: 'Ruta no encontrada' });
+    res.status(404).json({ mensaje: 'Esa ruta no existe. Revisa la dirección de la solicitud.' });
 });
 
 app.use((error, req, res, next) => {

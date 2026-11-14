@@ -6,5 +6,6 @@ const router = Router();
 router.use(verificarSesion);
 router.get('/', controller.listar);
 router.post('/', controller.crear);
+router.put('/:id/estrella', controller.actualizarEstrella);
 
 export default router;
