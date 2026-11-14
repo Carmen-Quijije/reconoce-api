@@ -1,6 +1,6 @@
-# Reconoce TLC
+# Reconoce ISTLC
 
-Reconoce TLC es el muro de reconocimientos del Tecnológico Liceo Cristiano. Los integrantes de la comunidad del ITSLC pueden agradecer la ayuda de otras personas de la comunidad, consultar las publicaciones del muro y revisar los reconocimientos que han recibido o enviado.
+Reconoce ISTLC es el muro de reconocimientos del Tecnológico Liceo Cristiano. Los integrantes de la comunidad del ITSLC pueden agradecer la ayuda de otras personas de la comunidad, consultar las publicaciones del muro y revisar los reconocimientos que han recibido o enviado.
 
 ## Alcance del proyecto completo
 
@@ -65,7 +65,7 @@ npm start
 
 ### Probar en Postman
 
-Importa la colección de Reconoce TLC y ejecuta sus nueve solicitudes en orden. El inicio de sesión guarda el token. Si repites el registro, cambia el usuario y el correo o reinicia el servidor.
+Importa la colección de Reconoce ISTLC y ejecuta sus nueve solicitudes en orden. El inicio de sesión guarda el token. Si repites el registro, cambia el usuario y el correo o reinicia el servidor.
 
 Para hacer las solicitudes a mano, usa `http://127.0.0.1:4000` como URL base. Para las solicitudes con cuerpo, selecciona **Body → raw → JSON**.
 

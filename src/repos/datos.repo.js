@@ -7,7 +7,7 @@ export const usuarios = [
     { id: 1, nombre: 'Ana Martínez', usuario: 'ana.martinez', correo: 'ana@itslc.example', carreraId: 1, rol: 'usuario', fotoUrl: null, contrasena: 'AnaDemo123!' },
     { id: 2, nombre: 'Pedro Ramírez', usuario: 'pedro.ramirez', correo: 'pedro@itslc.example', carreraId: 1, rol: 'usuario', fotoUrl: null, contrasena: 'PedroDemo123!' },
     { id: 3, nombre: 'Lucía Torres', usuario: 'lucia.torres', correo: 'lucia@itslc.example', carreraId: 2, rol: 'usuario', fotoUrl: null, contrasena: 'LuciaDemo123!' },
-    { id: 4, nombre: 'Administración TLC', usuario: 'admin.tlc', correo: 'admin@itslc.example', carreraId: 2, rol: 'admin', fotoUrl: null, contrasena: 'AdminDemo123!' }
+    { id: 4, nombre: 'Administración ISTLC', usuario: 'admin.tlc', correo: 'admin@itslc.example', carreraId: 2, rol: 'admin', fotoUrl: null, contrasena: 'AdminDemo123!' }
 ];
 
 export const reconocimientos = [
